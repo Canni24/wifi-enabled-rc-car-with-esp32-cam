@@ -58,8 +58,8 @@ const int PWMResolution = 8;   // 8-bit 0..255
 #define PCLK_GPIO_NUM     22
 
 // AP credentials
-const char* ssid     = "Cam_Car";
-const char* password = "12345678";
+const char* ssid     = "IEEE_CAR"; //you need to define your own custom ssid
+const char* password = "12345678"; // you need to define your own custom password
 
 // Server and websockets
 AsyncWebServer server(80);
@@ -67,9 +67,8 @@ AsyncWebSocket wsCamera("/Camera");
 AsyncWebSocket wsCarInput("/CarInput");
 uint32_t cameraClientId = 0;
 
-// HTML UI (Speed removed)
+// HTML UI 
 const char* htmlHomePage PROGMEM = R"HTMLHOMEPAGE(
-<!-- Replace your htmlHomePage with this version -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
